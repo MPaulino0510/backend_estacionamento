@@ -158,7 +158,16 @@ app.get("/faturamento", (req, res)=>{
         faturamento: Number(faturamento.toFixed(2))
     })
 });
+app.delete("/veiculos/:id", (req, res)=>{
+    const indice = VEICULOS.findIndex((v) => v.id === Number(req.params.id));
 
+    if(indice === -1){
+        return res.status(404).json({erro: "Veículo não encontrado"});
+    }
+
+    const [removido] = VEICULOS.splice(indice, 1);
+    return res.json({mensagem: "Registro cancelado!", removido});
+});
 
 app.listen(PORT,()=>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
