@@ -1,0 +1,17 @@
+{
+  "name": "estacionamento",
+  "version": "1.0.0",
+  "description": "REGRAS DE NEGÓCIO\r - Capacidade: 20 vagas\r - Primeira hora ou fração: R$10,00\r - Cada hora adicional ou fração: R$ 5,00\r - A mesma placa não pode estar estacionada duas vezes simultaneamente\r - A saída libera a vaga e registra o valor no histórico\r - A exclusão cancela um registro de entrada, sem gerar cobrança\r - O relatório soma os valores das saídas registradas. Nesta versão didática não há integração com pagamentos reais",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node servidor.js"
+  },
+  "keywords": [],
+  "author": "Miguel",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
